@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สถานที่ท่องเที่ยวภูเก็ต</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f7fbff;
+      color: #223;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      background: #0f4c81;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background: #3ea2ff;
+      color: #fff;
+    }
+
+    .hero {
+      padding: 30px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #eaf7ff, #cfeaff);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      color: #0f4c81;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.01);
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      color: #0f4c81;
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+    }
+
+    footer {
+      background: #123952;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\poo.png" alt="ภาพปกสถานที่ท่องเที่ยวภูเก็ต">
+  </header>
+
+  <div class="navbar">
+    <a href="wbsite.html">หน้าแรก</a>
+    <a href="teepak.html.html">แนะนำที่พัก</a>
+    <a href="food.html">อาหาร</a>
+    <a href="location.html">สถานที่ท่องเทียว</a>
+    <a href="contact.html">ติดต่อเรา</a>
+  </div>
+
+  <section class="hero">
+    <h1>สถานที่ท่องเที่ยวที่น่ากลับไปอีก</h1>
+    <p>ภูเก็ตมีจุดชมวิวและสถานที่ท่องเที่ยวมากมายทั้งชายหาดธรรมชาติ ป่าทะเล และแลนด์มาร์กที่น่าสนใจ เหมาะสำหรับทั้งครอบครัวและนักท่องเที่ยว</p>
+  </section>
+
+  <div class="container">
+    <div class="card">
+      <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\12c3a6edf81445219786a70ed9d5f380.jpg" alt="วิวทะเลภูเก็ต">
+      <div class="card-content"></div>
+        <p>หาดราไวย์เป็นชายหาดแห่งหนึ่งในจังหวัดภูเก็ต มีความกว้างรองจากหาดป่าตอง เป็นชายหาดที่มีร้านอาหารอยู่จำนวนมาก ตั้งอยู่ห่างจากตัวเมือง ประมาณ 16.5 กิโลเมตร เป็นที่นิยมมาท่องเที่ยวและทานอาหารริมชายหาด ทั้งชาวไทยและชาวต่างชาติ หาดราไวย์นับว่าเป็นจุดสำหรับขึ้นเรือของนักท่องเที่ยวไปยังเกาะต่าง ๆ มากกว่าการเล่นน้ำ 
+    </div>
+    <div class="card">
+      <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\b9ebde022ea542a88318a0c30ad1e4cb.webp" alt="โรงแรมและวิวภูเก็ต">
+      <div class="card-content">
+        <p>จุดชมวิวที่เป็นแลนด์มาร์คสำคัญของเกาะภูเก็ต แหลมปลายสุดของภูเก็ต เป็นจุดท่องเที่ยวชมวิวที่สามารถมองเห็นพระอาทิตย์ตกน้ำได้สวยติดอันดับโลกเลยทีเดียว เพราะจุดนี่จะเห็นพระอาทิตย์เคลื่อนตัวลงสู่ทะเลได้ชัดเจน และจุดเด่นอีกแห่งหนึ่งคือ "ประภาคารกาญจนาภิเษก แหลมพรหมเทพ" ที่โดดเด่นมาแต่ไกล โดยภายในประภาคารยังมีการจัดแสดงนิทรรศการเรื่องราวต่าง ๆ </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\2d7c774487d9493491a305dbf1379d68.webp" alt="วิวเมืองภูเก็ต">
+      <div class="card-content">
+        <p>เป็นชายหาดที่มีชื่อเสียงมากที่สุดของเกาะภูเก็ต เป็นจุดท่องเที่ยวภูเก็ตที่ไม่มีนักท่องเที่ยวคนไหนไม่รู้จักหาดป่าตองแน่นอนเลยค่ะ หาดป่าตอง อยู่ห่างจากตัวเมืองภูเก็ตประมาณ 15 กิโลเมตร เป็นที่ท่องเที่ยวแบบชายหาดลักษณะโค้งเว้าเข้าหากันเหมือนรูปพระจันทร์ มีความยาวถึง 9 กิโลเมตรหาดทรายขาวเหมาะกับการเดินเล่นชิลล์ ๆ นอนอาบแดดบนชายหาด </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\eb9ebd1340d140babd48fbcec205deaa.webp" alt="ทะเลและธรรมชาติ">
+      <div class="card-content">
+        <p>วัดฉลองเป็นวัดเก่าแก่ ไม่มีบันทึกที่แน่ชัดว่าสร้างขึ้นเมื่อใด แต่มีบันทึกขึ้นในสมัยรัชกาลที่ 3 พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ทรงเปลี่ยนชื่อใหม่เป็น วัดไชยธาราราม แต่ชาวบ้านยังคงเรียกว่าวัดฉลองเพราะเป็นชื่อที่เรียกง่ายกว่า ในวัดมีพระมหาธาตุเจดีย์ พระจอมไทยบารมีประกาศ และพระมหาธาตุเจดีย์และพระพุทธรูปปางต่าง ๆ มากมาย ปัจจุบันเป็นจุดท่องเที่ยวภูเก็ตที่นิยมในจังหวัดภูเก็ต</p>
+      </div>
+    </div>
+  </div>
+
+ <footer>
+    <h2>ช่องทางติดต่อ 095-360-4113</h2>
+  </footer>
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <span class="close" id="closeModal" aria-label="ปิดภาพ">&times;</span>
+    <img class="modal-content" id="modalImage" alt="ภาพขยาย">
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card img');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModalButton = document.getElementById('closeModal');
+
+    cards.forEach((img) => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeModalButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script></body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อเรา</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f8fbff;
+      color: #233;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      background: #1d4d7a;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background: #4aa3ff;
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .box h1, .box h2 {
+      color: #1d4d7a;
+      margin-top: 0;
+    }
+
+    .clickable-image {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .clickable-image:hover {
+      transform: scale(1.01);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .info p {
+      margin: 8px 0;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      background: #1d4d7a;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #4aa3ff;
+    }
+
+    footer {
+      background: #163b5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="heroImage" class="clickable-image" src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\poo.png" alt="ภาพปกติดต่อเรา">
+  </header>
+
+  <div class="navbar">
+    <a href="wbsite.html">หน้าแรก</a>
+    <a href="teepak.html.html">แนะนำที่พัก</a>
+    <a href="food.html">อาหาร</a>
+    <a href="location.html">สถานที่ท่องเทียว</a>
+    <a href="contact.html">ติดต่อเรา</a>
+  </div>
+
+  <div class="container">
+    <div class="box info">
+      <h1>ติดต่อเรา</h1>
+      <p>หากต้องการข้อมูลเพิ่มเติมเรื่องการท่องเที่ยวในภูเก็ต สามารถติดต่อเราได้ตามช่องทางด้านล่าง</p>
+      <p><strong>โทร:</strong> 095-360-4113</p>
+
+    </div>
+
+    <div class="box">
+      <h2>ส่งข้อความถึงเรา</h2>
+      <form>
+        <input type="text" placeholder="ชื่อ-นามสกุล" required>
+        <input type="email" placeholder="อีเมล" required>
+        <textarea rows="5" placeholder="ข้อความของคุณ" required></textarea>
+        <button type="submit">ส่งข้อความ</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <h2>ช่องทางติดต่อ 095-360-4113</h2>
+  </footer>
+
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <span class="close" id="closeModal" aria-label="ปิดภาพ">&times;</span>
+    <img class="modal-content" id="modalImage" alt="ภาพขยาย">
+  </div>
+
+  <script>
+    const heroImage = document.getElementById('heroImage');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModalButton = document.getElementById('closeModal');
+
+    heroImage.addEventListener('click', () => {
+      modalImage.src = heroImage.src;
+      modalImage.alt = heroImage.alt;
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeModalButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

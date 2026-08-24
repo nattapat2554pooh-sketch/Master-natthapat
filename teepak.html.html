@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แนะนำที่พักภูเก็ต</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: linear-gradient(135deg, #f4faff 0%, #eaf6ff 100%);
+      color: #223;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      background: #0f4c81;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background: #4aa3ff;
+      color: white;
+    }
+
+    .hero {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #e8f6ff, #dbeeff);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      color: #0f4c81;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #456;
+    }
+
+    .section-title {
+      padding: 20px 20px 0;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      margin: 0 0 6px;
+      color: #0f4c81;
+      font-size: 1.4rem;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #5b6b7a;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.03);
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eaf7ff;
+      color: #0f4c81;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: #0f4c81;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #555;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .features li {
+      margin-bottom: 6px;
+      color: #355;
+    }
+
+    .features li::before {
+      content: "✓ ";
+      color: #1f8e5a;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #123952;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\poo.png" alt="ภาพปกแนะนำที่พักภูเก็ต">
+  </header>
+
+  <div class="navbar">
+    <a href="wbsite.html">หน้าแรก</a>
+    <a href="teepak.html.html">แนะนำที่พัก</a>
+    <a href="food.html">อาหาร</a>
+    <a href="location.html">สถานที่ท่องเทียว</a>
+    <a href="contact.html">ติดต่อเรา</a>
+  </div>
+
+  <section class="hero">
+    <h1>แนะนำที่พักภูเก็ตแบบผ่อนคลายและหรู</h1>
+    <p>เลือกที่พักที่เหมาะกับสไตล์การเที่ยวของคุณ ทั้งสำหรับวันหยุดสุดพิเศษ ครอบครัว หรือการพักผ่อนแบบชิล ๆ ใกล้ทะเลและสถานที่ท่องเที่ยว</p>
+  </section>
+
+  <div class="section-title">
+    <h2>ที่พักแนะนำสำหรับการพักผ่อนในภูเก็ต</h2>
+    <p>ทุกที่พักมีความสวยงามและสิ่งอำนวยความสะดวกที่ทำให้การท่องเที่ยวสนุกขึ้น</p>
+  </div>
+
+  <div class="card-grid">
+    <article class="card">
+      <img src="271278664.jpg" alt="เซ็นทารา แกรนด์บีช รีสอร์ต ภูเก็ต">
+      <div class="card-content">
+        <span class="badge">หรูและสะดวกสบาย</span>
+        <h3>เซ็นทารา แกรนด์บีช รีสอร์ต ภูเก็ต</h3>
+        <p>รีสอร์ตหรูริมชายหาดที่มีสระว่ายน้ำขนาดใหญ่ วิวทะเลสวยงาม และบริการครบครัน เหมาะสำหรับพักผ่อนอย่างเต็มที่ในวันหยุด</p>
+        <ul class="features">
+          <li>สระว่ายน้ำขนาดใหญ่</li>
+          <li>วิวทะเลสวยงาม</li>
+          <li>ใกล้สถานที่ท่องเที่ยว</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="Sound-01.jpg" alt="โรงแรมริมทะเลพาตง">
+      <div class="card-content">
+        <span class="badge">เดินทางสะดวก</span>
+        <h3>เกศรา บูทิก ฮิสทอริก โฮเต็ล
+        </h3>
+        <p>เดินทางสะดวก ใกล้ร้านอาหารและจุดท่องเที่ยวมากมาย เหมาะกับการท่องเที่ยวแบบไม่เร่งรีบและชิล ๆ</p>
+        <ul class="features">
+          <li>ใกล้แหล่งช้อปปิ้ง</li>
+          <li>บรรยากาศเงียบสงบ</li>
+          <li>ใช้ระยะทางเดินไม่ไกล</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="The-arbern-02.jpg" alt="เดอะ อาร์เบิร์น ภูเก็ต">
+      <div class="card-content">
+        <span class="badge">เงียบสงบและน่ารัก</span>
+        <h3>เดอะ อาร์เบิร์น ภูเก็ต</h3>
+        <p>บรรยากาศที่เงียบสงบและอบอุ่น เหมาะสำหรับคนที่อยากพักผ่อนแบบสบาย ๆ ใกล้ธรรมชาติและความเป็นส่วนตัว</p>
+        <ul class="features">
+          <li>บรรยากาศชิล</li>
+          <li>เหมาะกับคู่รักและครอบครัว</li>
+          <li>ใกล้ธรรมชาติ</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="Xinlor-03.jpg" alt="ซินลอร์ รีสอร์ต ภูเก็ต">
+      <div class="card-content">
+        <span class="badge">พักผ่อนครบทั้งวิวและสบาย</span>
+        <h3>ซินลอร์ รีสอร์ต ภูเก็ต</h3>
+        <p>เลือกพักได้ทั้งห้องพักสบายและวิวสระว่ายน้ำ ทำให้การเที่ยวภูเก็ตรู้สึกผ่อนคลายมากขึ้น</p>
+        <ul class="features">
+          <li>วิวสระว่ายน้ำสวย</li>
+          <li>ห้องพักน่ารัก</li>
+          <li>เหมาะสำหรับพักยาว</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <h2>ช่องทางติดต่อ 095-360-4113</h2>
+  </footer>
+
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <span class="close" id="closeModal" aria-label="ปิดภาพ">&times;</span>
+    <img class="modal-content" id="modalImage" alt="ภาพขยาย">
+  </div>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.card img');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModalButton = document.getElementById('closeModal');
+
+    galleryImages.forEach((img) => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeModalButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

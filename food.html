@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>อาหารเมืองภูเก็ต</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #fffaf2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      background: #1f5f5b;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background: #f4a261;
+      color: #222;
+    }
+
+    .hero {
+      padding: 30px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #fff2d9, #ffe4b5);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      color: #b34700;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.01);
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      color: #0f4c5c;
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+    }
+
+    footer {
+      background: #234b4d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\PC\Desktop\ณัฐภัทร สีหาวงค์\การสร้างเว็บไซต์\poo.png" alt="ภาพปกเว็บไซต์อาหารภูเก็ต">
+  </header>
+
+  <div class="navbar">
+    <a href="wbsite.html">หน้าแรก</a>
+    <a href="teepak.html.html">แนะนำที่พัก</a>
+    <a href="food.html">อาหาร</a>
+    <a href="location.html">สถานที่ท่องเทียว</a>
+    <a href="contact.html">ติดต่อเรา</a>
+  </div>
+
+  <section class="hero">
+    <h1>อาหารขึ้นชื่อของเมืองภูเก็ต</h1>
+    <p>ภูเก็ตมีอาหารที่มีเอกลักษณ์และรสชาติอันเป็นเสน่ห์ของชาวใต้ โดยเฉพาะเมนูที่ผสมผสานความหอมของกะทิ เครื่องเทศ และความสดใหม่ของซีฟู้ด</p>
+  </section>
+
+  <div class="container">
+    <div class="card">
+      <img src="1e82c345b776218acbbfedff0ae7f1d1.jpg" alt="หมี่ฮกเกี้ยน">
+      <div class="card-content">
+        <h2>หมี่ฮกเกี้ยน</h2>
+        <p>บะหมี่เหลืองเส้นหนานุ่มผัดกับซอสซีอิ๊วหอมๆ ใส่หมู ซีฟู้ด และไข่ลวก ทำให้รับประทานแล้วอร่อยกลมกล่อม</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images (2).jpg" alt="แกงปูใบชะพลู">
+      <div class="card-content">
+        <h2>แกงปูใบชะพลู</h2>
+        <p>แกงกะทิรสจัดจ้านหอมใบชะพลู ใส่เนื้อปูและกุ้ง ผักสด เข้ากันได้อย่างลงตัวกับขนมจีนหรือเส้นหมี่</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images (3).jpg" alt="โรตีแกง">
+      <div class="card-content">
+        <h2>โรตีแกง</h2>
+        <p>อาหารเช้าของภูเก็ตที่มีความเป็นเอกลักษณ์ แผ่นโรตีกรอบหอมทานคู่กับแกงมัสมั่นหรือแกงไก่รสเข้มข้น</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="5-56d3155c-4ea3b806-Ar_Pong.jpg" alt="ขนมอาโป้ง">
+      <div class="card-content">
+        <h2>ขนมอาโป้ง</h2>
+        <p>ขนมพื้นเมืองที่มีลักษณะกรอบนอกนุ่มใน ทำจากแป้งข้าวเจ้า น้ำตาลและกะทิ รสชาติหวานกำลังดี</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <h2>ช่องทางติดต่อ 095-360-4113</h2>
+  </footer>
+
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <span class="close" id="closeModal" aria-label="ปิดภาพ">&times;</span>
+    <img class="modal-content" id="modalImage" alt="ภาพขยาย">
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card img');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModalButton = document.getElementById('closeModal');
+
+    cards.forEach((img) => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeModalButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
